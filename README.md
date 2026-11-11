@@ -18,7 +18,7 @@ The human-verified Minival-928 release provides a compact offline evaluation set
 | Evaluation groups | 4 |
 | Included reference model runs | 16 |
 
-The [Hugging Face dataset repository](https://huggingface.co/datasets/erenzhou/RSLiveBench-UAV) is the destination for the release package, including English prompts, anonymized images, gold answers, evaluation scripts, and reference predictions. Check that page for the current file availability before downloading.
+Download the release package from the [Hugging Face dataset repository](https://huggingface.co/datasets/erenzhou/RSLiveBench-UAV). It includes English prompts, anonymized images, gold answers, evaluation scripts, and reference predictions.
 
 ## What the benchmark measures
 
