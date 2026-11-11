@@ -76,38 +76,38 @@ All 30 models have predictions for the same 928 questions. The 16 **Bundled** ru
 
 Scores are percentages (higher is better). **Overall** is the equal-weight mean of the four evaluation groups. Bold marks the highest score in each column. [Download exact scores as CSV](minival_928_30_models.csv).
 
-| Rank | Model | Source | 2D perception | 3D perception | Cross-view perception | Reasoning | Overall |
-| ---: | :--- | :--- | ---: | ---: | ---: | ---: | ---: |
-| 1 | gpt-6-astra / low | Rescored | 60.15 | **83.11** | **85.95** | **41.49** | **67.67** |
-| 2 | gpt-6.1-sol / low | Bundled | **62.90** | 79.89 | 82.72 | 40.00 | 66.38 |
-| 3 | ACE-Brain-0.6-9B | Bundled | 40.69 | 72.69 | 58.37 | 15.00 | 46.69 |
-| 4 | gpt-5.6-luna / low | Bundled | 41.34 | 64.30 | 44.63 | 23.33 | 43.40 |
-| 5 | DeepSeek-V4.1-Flash-1017 / low | Bundled | 45.05 | 62.76 | 33.76 | 19.97 | 40.39 |
-| 6 | RynnBrain1.1-9B | Rescored | 38.18 | 59.35 | 46.20 | 15.62 | 39.84 |
-| 7 | Qwen3.5-9B | Bundled | 46.15 | 71.03 | 20.22 | 20.43 | 39.46 |
-| 8 | RoboBrain2.5-8B-NV | Bundled | 40.26 | 58.63 | 17.44 | 23.58 | 34.98 |
-| 9 | Qwen3-VL-8B-Instruct | Bundled | 47.03 | 50.26 | 21.41 | 21.12 | 34.96 |
-| 10 | RynnBrain-8B | Rescored | 36.66 | 50.22 | 21.81 | 26.39 | 33.77 |
-| 11 | PhysBrain1.5-8B | Bundled | 29.50 | 34.58 | 23.08 | 16.92 | 26.02 |
-| 12 | MiMo-Embodied-7B | Bundled | 27.79 | 40.96 | 13.87 | 19.32 | 25.48 |
-| 13 | Cosmos-Reason2-8B | Rescored | 31.16 | 20.02 | 17.16 | 25.44 | 23.45 |
-| 14 | ACE-Brain-0-8B | Bundled | 23.07 | 35.00 | 14.19 | 19.40 | 22.91 |
-| 15 | SenseNova-SI-1.4-InternVL3-8B | Rescored | 27.03 | 12.68 | 24.35 | 21.36 | 21.35 |
-| 16 | InternVL3.5-4B | Bundled | 25.48 | 26.92 | 15.52 | 15.19 | 20.78 |
-| 17 | SenseNova-SI-1.3-InternVL3-8B | Rescored | 25.23 | 15.79 | 17.82 | 17.32 | 19.04 |
-| 18 | InternVL3.5-8B | Bundled | 29.11 | 19.88 | 17.45 | 9.62 | 19.02 |
-| 19 | SenseNova-SI-1.5-InternVL3-8B | Rescored | 26.73 | 11.01 | 22.91 | 13.58 | 18.56 |
-| 20 | SenseNova-SI-1.1-InternVL3-8B | Rescored | 33.08 | 8.17 | 15.44 | 15.69 | 18.10 |
-| 21 | ACE-Brain-0.5-8B | Rescored | 29.14 | 9.63 | 14.54 | 14.07 | 16.84 |
-| 22 | Qwen3.5-2B | Bundled | 38.05 | 15.93 | 5.58 | 7.58 | 16.79 |
-| 23 | RynnBrain-2B | Rescored | 32.03 | 9.30 | 13.15 | 8.75 | 15.81 |
-| 24 | RynnBrain1.1-2B | Rescored | 22.93 | 9.17 | 20.67 | 9.54 | 15.58 |
-| 25 | Cosmos-Reason2-2B | Rescored | 28.65 | 9.01 | 14.54 | 8.29 | 15.12 |
-| 26 | Pelican1.0-VL-7B (2K) | Rescored | 26.03 | 2.12 | 14.22 | 15.53 | 14.48 |
-| 27 | SenseNova-SI-1.1-InternVL3-2B | Rescored | 23.56 | 2.54 | 14.76 | 5.69 | 11.64 |
-| 28 | GeoChat-7B | Bundled | 12.19 | 6.88 | 7.64 | 10.93 | 9.41 |
-| 29 | VHM | Bundled | 10.42 | 0.33 | 7.96 | 0.97 | 4.92 |
-| 30 | GeoLLaVA-8K | Bundled | 0.83 | 0.00 | 0.00 | 0.00 | 0.21 |
+| Model | 2D perception | 3D perception | Cross-view perception | Reasoning | Overall |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| gpt-6-astra / low | 60.15 | **83.11** | **85.95** | **41.49** | **67.67** |
+| gpt-6.1-sol / low | **62.90** | 79.89 | 82.72 | 40.00 | 66.38 |
+| ACE-Brain-0.6-9B | 40.69 | 72.69 | 58.37 | 15.00 | 46.69 |
+| gpt-5.6-luna / low | 41.34 | 64.30 | 44.63 | 23.33 | 43.40 |
+| DeepSeek-V4.1-Flash-1017 / low | 45.05 | 62.76 | 33.76 | 19.97 | 40.39 |
+| RynnBrain1.1-9B | 38.18 | 59.35 | 46.20 | 15.62 | 39.84 |
+| Qwen3.5-9B | 46.15 | 71.03 | 20.22 | 20.43 | 39.46 |
+| RoboBrain2.5-8B-NV | 40.26 | 58.63 | 17.44 | 23.58 | 34.98 |
+| Qwen3-VL-8B-Instruct | 47.03 | 50.26 | 21.41 | 21.12 | 34.96 |
+| RynnBrain-8B | 36.66 | 50.22 | 21.81 | 26.39 | 33.77 |
+| PhysBrain1.5-8B | 29.50 | 34.58 | 23.08 | 16.92 | 26.02 |
+| MiMo-Embodied-7B | 27.79 | 40.96 | 13.87 | 19.32 | 25.48 |
+| Cosmos-Reason2-8B | 31.16 | 20.02 | 17.16 | 25.44 | 23.45 |
+| ACE-Brain-0-8B | 23.07 | 35.00 | 14.19 | 19.40 | 22.91 |
+| SenseNova-SI-1.4-InternVL3-8B | 27.03 | 12.68 | 24.35 | 21.36 | 21.35 |
+| InternVL3.5-4B | 25.48 | 26.92 | 15.52 | 15.19 | 20.78 |
+| SenseNova-SI-1.3-InternVL3-8B | 25.23 | 15.79 | 17.82 | 17.32 | 19.04 |
+| InternVL3.5-8B | 29.11 | 19.88 | 17.45 | 9.62 | 19.02 |
+| SenseNova-SI-1.5-InternVL3-8B | 26.73 | 11.01 | 22.91 | 13.58 | 18.56 |
+| SenseNova-SI-1.1-InternVL3-8B | 33.08 | 8.17 | 15.44 | 15.69 | 18.10 |
+| ACE-Brain-0.5-8B | 29.14 | 9.63 | 14.54 | 14.07 | 16.84 |
+| Qwen3.5-2B | 38.05 | 15.93 | 5.58 | 7.58 | 16.79 |
+| RynnBrain-2B | 32.03 | 9.30 | 13.15 | 8.75 | 15.81 |
+| RynnBrain1.1-2B | 22.93 | 9.17 | 20.67 | 9.54 | 15.58 |
+| Cosmos-Reason2-2B | 28.65 | 9.01 | 14.54 | 8.29 | 15.12 |
+| Pelican1.0-VL-7B (2K) | 26.03 | 2.12 | 14.22 | 15.53 | 14.48 |
+| SenseNova-SI-1.1-InternVL3-2B | 23.56 | 2.54 | 14.76 | 5.69 | 11.64 |
+| GeoChat-7B | 12.19 | 6.88 | 7.64 | 10.93 | 9.41 |
+| VHM | 10.42 | 0.33 | 7.96 | 0.97 | 4.92 |
+| GeoLLaVA-8K | 0.83 | 0.00 | 0.00 | 0.00 | 0.21 |
 
 The 16 bundled runs were re-evaluated and their reports matched the shipped `reference_report.json` files exactly. All 14 additional runs passed the 928-question coverage check. Visual-grounding coordinates use each model's recorded protocol; the new runs use `[0, 1000]`. Audited output-format conversions were applied to RynnBrain and SenseNova predictions before scoring.
 ## 📦 Dataset
