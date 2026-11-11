@@ -27,7 +27,7 @@
   <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-16A34A?style=flat-square" alt="CC BY 4.0 license"></a>
 </p>
 
-**928 questions · 597 UAV images · 17 tasks · 4 evaluation groups**
+**Public validation: 928 questions · Private test: 35,491 questions · 17 tasks**
 
 [Overview](#-overview) · [Benchmark](#-benchmark-at-a-glance) · [Results](#-minival-928-results) · [Dataset](#-dataset) · [Evaluation](#-evaluation) · [Citation](#-citation)
 
@@ -37,7 +37,14 @@
 
 RSLiveBench-UAV evaluates how vision-language models understand vehicles, scenes, and spatial relationships in UAV imagery. It spans recognition, 2D and 3D perception, cross-view correspondence, and reasoning.
 
-**Minival-928** is a human-verified, compact offline evaluation release. It is distinct from the larger Start-10 benchmark. The dataset, gold answers, evaluator, and reference predictions are hosted on [Hugging Face](https://huggingface.co/datasets/erenzhou/RSLiveBench-UAV).
+The benchmark has two evaluation splits:
+
+| Split | Role | Scoring |
+| :--- | :--- | :--- |
+| **Minival-928 · public validation** | 928 human-verified questions for development and reproducible comparisons | Gold answers and a local evaluator are included. |
+| **Start-10 Full · private test** | 35,491 questions across ten aerial scenes | Official answers are withheld; server-side scoring will open at [rslivebench.space](https://rslivebench.space/). |
+
+Both splits are hosted in the [Hugging Face dataset](https://huggingface.co/datasets/erenzhou/RSLiveBench-UAV). Submit predictions for all Full questions; its official score covers **34,563 questions**, excluding the **928 questions shared with Minival-928**. In this README, *public* and *private* describe answer availability and scoring, not repository access.
 
 > [!NOTE]
 > The GitHub and Hugging Face repositories are currently private. Access requires authorization from the repository owners.
@@ -112,7 +119,7 @@ Scores are percentages (higher is better). **Overall** is the equal-weight mean 
 The 16 bundled runs were re-evaluated and their reports matched the shipped `reference_report.json` files exactly. All 14 additional runs passed the 928-question coverage check. Visual-grounding coordinates use each model's recorded protocol; the new runs use `[0, 1000]`. Audited output-format conversions were applied to RynnBrain and SenseNova predictions before scoring.
 ## 📦 Dataset
 
-The [Hugging Face dataset repository](https://huggingface.co/datasets/erenzhou/RSLiveBench-UAV) contains English prompts, anonymized images, gold answers, evaluation scripts, and reference predictions. Its dataset card provides the release details and file layout.
+The [Hugging Face dataset repository](https://huggingface.co/datasets/erenzhou/RSLiveBench-UAV) contains both splits. Minival-928 includes English prompts, anonymized images, gold answers, an evaluator, and reference predictions. [Start-10 Full](https://huggingface.co/datasets/erenzhou/RSLiveBench-UAV/tree/main/start10_full) provides prompts, anonymized images, and a prediction template; its scored answers and evaluator are held on the benchmark server.
 
 Questions refer to one or two images. For two-image questions, preserve the image order in the question record. Each prompt specifies its answer format; visual-grounding boxes use coordinates normalized to `[0, 1000]` by default.
 
@@ -128,7 +135,7 @@ After obtaining the dataset package, write one string answer per question ID to 
 
 ### 2. Score your model
 
-From the root of the downloaded dataset package, run:
+For the Minival-928 public validation split, run from the root of the downloaded dataset package:
 
 ```bash
 python evaluator/score_all.py --predictions your_predictions.jsonl --output score_output
@@ -143,6 +150,8 @@ The package includes predictions from 16 reference model runs:
 ```bash
 python reference_predictions/evaluate_all.py --output reproduced_scores
 ```
+
+For the Start-10 Full private test split, prepare a prediction for every question using its template and submit to [rslivebench.space](https://rslivebench.space/) when the Full submission route opens. Its official score is computed on the 34,563 questions outside Minival-928.
 
 ## 🔒 Privacy and responsible use
 
