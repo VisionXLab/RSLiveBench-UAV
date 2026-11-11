@@ -29,7 +29,7 @@
 
 **928 questions · 597 UAV images · 17 tasks · 4 evaluation groups**
 
-[Overview](#-overview) · [Benchmark](#-benchmark-at-a-glance) · [Dataset](#-dataset) · [Evaluation](#-evaluation) · [Citation](#-citation)
+[Overview](#-overview) · [Benchmark](#-benchmark-at-a-glance) · [Results](#-minival-928-results) · [Dataset](#-dataset) · [Evaluation](#-evaluation) · [Citation](#-citation)
 
 </div>
 
@@ -68,6 +68,31 @@ RSLiveBench-UAV evaluates how vision-language models understand vehicles, scenes
 | **3D perception** | Vehicle dimensions and relative or absolute distance. |
 | **Cross-view perception** | Counting, grounding, and instance re-identification across views. |
 | **Reasoning** | Camera height and pitch, vehicle polar coordinates, capture location, and capture hour. |
+
+## 🔥 Minival-928 results
+
+The table reports scores from the 16 bundled reference model runs. Every model has predictions for all 928 questions. Scores range from 0 to 100, and higher is better. Models are ranked by **Overall**, the equal-weight mean of the four evaluation groups. **Bold** marks the best score in each column.
+
+| Rank | Model | 2D perception | 3D perception | Cross-view perception | Reasoning | Overall |
+| ---: | :--- | ---: | ---: | ---: | ---: | ---: |
+| 1 | gpt-6.1-sol / low | **62.90** | **79.89** | **82.72** | **40.00** | **66.38** |
+| 2 | ACE-Brain-0.6-9B | 40.69 | 72.69 | 58.37 | 15.00 | 46.69 |
+| 3 | gpt-5.6-luna / low | 41.34 | 64.30 | 44.63 | 23.33 | 43.40 |
+| 4 | DeepSeek-V4.1-Flash-1017 / low | 45.05 | 62.76 | 33.76 | 19.97 | 40.39 |
+| 5 | Qwen3.5-9B | 46.15 | 71.03 | 20.22 | 20.43 | 39.46 |
+| 6 | RoboBrain2.5-8B-NV | 40.26 | 58.63 | 17.44 | 23.58 | 34.98 |
+| 7 | Qwen3-VL-8B-Instruct | 47.03 | 50.26 | 21.41 | 21.12 | 34.96 |
+| 8 | PhysBrain1.5-8B | 29.50 | 34.58 | 23.08 | 16.92 | 26.02 |
+| 9 | MiMo-Embodied-7B | 27.79 | 40.96 | 13.87 | 19.32 | 25.48 |
+| 10 | ACE-Brain-0-8B | 23.07 | 35.00 | 14.19 | 19.40 | 22.91 |
+| 11 | InternVL3.5-4B | 25.48 | 26.92 | 15.52 | 15.19 | 20.78 |
+| 12 | InternVL3.5-8B | 29.11 | 19.88 | 17.45 | 9.62 | 19.02 |
+| 13 | Qwen3.5-2B | 38.05 | 15.93 | 5.58 | 7.58 | 16.79 |
+| 14 | GeoChat-7B | 12.19 | 6.88 | 7.64 | 10.93 | 9.41 |
+| 15 | VHM | 10.42 | 0.33 | 7.96 | 0.97 | 4.92 |
+| 16 | GeoLLaVA-8K | 0.83 | 0.00 | 0.00 | 0.00 | 0.21 |
+
+These values come from the `reference_report.json` files in the [Hugging Face `reference_predictions/` directory](https://huggingface.co/datasets/erenzhou/RSLiveBench-UAV/tree/main/reference_predictions). Use the reproduction command below to recalculate them with the included evaluator. The bundled model registry records the Visual Grounding coordinate mode used for each run.
 
 ## 📦 Dataset
 
