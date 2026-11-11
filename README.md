@@ -5,6 +5,23 @@
 ### A Continually Evolving Vision-Language Benchmark for Aerial Spatial Intelligence
 
 <p>
+  Yue Zhou<sup>1</sup>, Jiawei Liu<sup>1</sup>, Jue Chen<sup>1</sup>,
+  Ziyang Gong<sup>2</sup>, Haojia Wei<sup>4</sup>, Jingxiang Li<sup>5</sup><br>
+  Xue Jiang<sup>2</sup>, Zhihang Zhong<sup>2</sup>, Pai Peng<sup>3</sup>,
+  Xue Yang<sup>2,3,*</sup>, Yansheng Li<sup>6</sup>, Jonathan Li<sup>5,*</sup>
+</p>
+
+<p>
+  <sup>1</sup>East China Normal University &nbsp;·&nbsp;
+  <sup>2</sup>Shanghai Jiao Tong University &nbsp;·&nbsp;
+  <sup>3</sup>Cowarobot<br>
+  <sup>4</sup>University of California, Los Angeles &nbsp;·&nbsp;
+  <sup>5</sup>University of Waterloo &nbsp;·&nbsp;
+  <sup>6</sup>Wuhan University<br>
+  <sup>*</sup>Corresponding authors
+</p>
+
+<p>
   <a href="https://rslivebench.space/"><img src="https://img.shields.io/badge/Project-Website-2563EB?style=flat-square" alt="Project website"></a>
   <a href="https://huggingface.co/datasets/erenzhou/RSLiveBench-UAV"><img src="https://img.shields.io/badge/Hugging%20Face-Dataset-FFD21E?style=flat-square&logo=huggingface&logoColor=black" alt="Hugging Face dataset"></a>
   <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-16A34A?style=flat-square" alt="CC BY 4.0 license"></a>
