@@ -27,15 +27,11 @@
   <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-16A34A?style=flat-square" alt="CC BY 4.0 license"></a>
 </p>
 
-<p><strong>Core production by DREAMS@ECNU, VisionXLab@SJTU, and Cowarobot</strong></p>
-
-<table>
-<tr>
-<td align="center" width="33%"><a href="http://zhouyue.space/"><img src="assets/partners/ecnu.png" height="52" alt="ECNU emblem for DREAMS@ECNU"></a><br><a href="http://zhouyue.space/">DREAMS@ECNU</a></td>
-<td align="center" width="33%"><a href="https://yangxue.site/"><img src="assets/partners/visionxlab.png" height="52" alt="VisionXLab@SJTU logo"></a><br><a href="https://yangxue.site/">VisionXLab@SJTU</a></td>
-<td align="center" width="33%"><a href="https://www.cowarobot.com/home"><img src="assets/partners/cowarobot.jpg" height="52" alt="Cowarobot logo"></a><br><a href="https://www.cowarobot.com/home">Cowarobot</a></td>
-</tr>
-</table>
+<p><strong>Core production by
+  <a href="http://zhouyue.space/">DREAMS@ECNU</a> ·
+  <a href="https://yangxue.site/">VisionXLab@SJTU</a> ·
+  <a href="https://www.cowarobot.com/home">Cowarobot</a>
+</strong></p>
 
 **Public validation: 928 questions · Server-scored test: 35,491 questions · 17 tasks**
 
