@@ -50,14 +50,11 @@ The benchmark has two evaluation splits:
 | **Minival-928 · public validation** | 928 human-verified questions selected from Full for development and reproducible comparisons | Gold answers and a local evaluator are included. |
 | **Start-10 Full · server-scored test** | 35,491 human-verified questions across ten aerial scenes | All 35,491 questions contribute to the official score; server-side scoring will open at [rslivebench.space](https://rslivebench.space/). |
 
-Both splits are hosted in the [Hugging Face dataset](https://huggingface.co/datasets/erenzhou/RSLiveBench-UAV). Submit predictions for all Full questions; its official score covers **all 35,491 questions**, including the **928 shared with Minival-928**. Those 928 answers are already available in Minival-928; the other 34,563 answers remain server-side. The split names describe the evaluation workflow, not repository access.
+Both splits are hosted in the [Hugging Face dataset](https://huggingface.co/datasets/erenzhou/RSLiveBench-UAV). Submit predictions for all Full questions; its official score covers **all 35,491 questions**, including the **928 shared with Minival-928**. Those 928 answers are already available in Minival-928; the other 34,563 answers remain server-side.
 
 Minival-928 balances all 17 task types and was selected to closely preserve model rankings relative to Full. The gold answers for both splits have been human-verified.
 
-Starting in **December 2026**, we will release a new benchmark pair every month: a smaller **public validation set** with answers and a larger **private test set** whose answers remain on the scoring server. Public and private describe answer availability and evaluation workflow, not repository access.
-
-> [!NOTE]
-> The GitHub and Hugging Face repositories are currently private. Access requires authorization from the repository owners.
+Starting in **December 2026**, we will release a new benchmark pair every month: a smaller **public validation set** with answers and a larger **private test set** whose answers remain on the scoring server.
 
 ## ✨ Highlights
 
