@@ -27,7 +27,17 @@
   <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-16A34A?style=flat-square" alt="CC BY 4.0 license"></a>
 </p>
 
-**Public validation: 928 questions · Private test: 35,491 questions · 17 tasks**
+<p><strong>Core production by DREAMS@ECNU, VisionXLab@SJTU, and Cowarobot</strong></p>
+
+<table>
+<tr>
+<td align="center" width="33%"><a href="http://zhouyue.space/"><img src="assets/partners/ecnu.png" height="52" alt="ECNU emblem for DREAMS@ECNU"></a><br><a href="http://zhouyue.space/">DREAMS@ECNU</a></td>
+<td align="center" width="33%"><a href="https://yangxue.site/"><img src="assets/partners/visionxlab.png" height="52" alt="VisionXLab@SJTU logo"></a><br><a href="https://yangxue.site/">VisionXLab@SJTU</a></td>
+<td align="center" width="33%"><a href="https://www.cowarobot.com/home"><img src="assets/partners/cowarobot.jpg" height="52" alt="Cowarobot logo"></a><br><a href="https://www.cowarobot.com/home">Cowarobot</a></td>
+</tr>
+</table>
+
+**Public validation: 928 questions · Server-scored test: 35,491 questions · 17 tasks**
 
 [Overview](#-overview) · [Benchmark](#-benchmark-at-a-glance) · [Results](#-minival-928-results) · [Dataset](#-dataset) · [Evaluation](#-evaluation) · [Citation](#-citation)
 
@@ -41,10 +51,14 @@ The benchmark has two evaluation splits:
 
 | Split | Role | Scoring |
 | :--- | :--- | :--- |
-| **Minival-928 · public validation** | 928 human-verified questions for development and reproducible comparisons | Gold answers and a local evaluator are included. |
-| **Start-10 Full · private test** | 35,491 questions across ten aerial scenes | Official answers are withheld; server-side scoring will open at [rslivebench.space](https://rslivebench.space/). |
+| **Minival-928 · public validation** | 928 human-verified questions selected from Full for development and reproducible comparisons | Gold answers and a local evaluator are included. |
+| **Start-10 Full · server-scored test** | 35,491 human-verified questions across ten aerial scenes | All 35,491 questions contribute to the official score; server-side scoring will open at [rslivebench.space](https://rslivebench.space/). |
 
-Both splits are hosted in the [Hugging Face dataset](https://huggingface.co/datasets/erenzhou/RSLiveBench-UAV). Submit predictions for all Full questions; its official score covers **34,563 questions**, excluding the **928 questions shared with Minival-928**. In this README, *public* and *private* describe answer availability and scoring, not repository access.
+Both splits are hosted in the [Hugging Face dataset](https://huggingface.co/datasets/erenzhou/RSLiveBench-UAV). Submit predictions for all Full questions; its official score covers **all 35,491 questions**, including the **928 shared with Minival-928**. Those 928 answers are already available in Minival-928; the other 34,563 answers remain server-side. The split names describe the evaluation workflow, not repository access.
+
+Minival-928 balances all 17 task types and was selected to closely preserve model rankings relative to Full. The gold answers for both splits have been human-verified.
+
+Starting in **December 2026**, we will release a new benchmark pair every month: a smaller **public validation set** with answers and a larger **private test set** whose answers remain on the scoring server. Public and private describe answer availability and evaluation workflow, not repository access.
 
 > [!NOTE]
 > The GitHub and Hugging Face repositories are currently private. Access requires authorization from the repository owners.
@@ -119,7 +133,7 @@ Scores are percentages (higher is better). **Overall** is the equal-weight mean 
 The 16 bundled runs were re-evaluated and their reports matched the shipped `reference_report.json` files exactly. All 14 additional runs passed the 928-question coverage check. Visual-grounding coordinates use each model's recorded protocol; the new runs use `[0, 1000]`. Audited output-format conversions were applied to RynnBrain and SenseNova predictions before scoring.
 ## 📦 Dataset
 
-The [Hugging Face dataset repository](https://huggingface.co/datasets/erenzhou/RSLiveBench-UAV) contains both splits. Minival-928 includes English prompts, anonymized images, gold answers, an evaluator, and reference predictions. [Start-10 Full](https://huggingface.co/datasets/erenzhou/RSLiveBench-UAV/tree/main/start10_full) provides prompts, anonymized images, and a prediction template; its scored answers and evaluator are held on the benchmark server.
+The [Hugging Face dataset repository](https://huggingface.co/datasets/erenzhou/RSLiveBench-UAV) contains both splits. Minival-928 includes English prompts, anonymized images, gold answers, an evaluator, and reference predictions. [Start-10 Full](https://huggingface.co/datasets/erenzhou/RSLiveBench-UAV/tree/main/start10_full) provides prompts, anonymized images, and a prediction template; its complete answer key and scoring service are held on the benchmark server. Minival-928 reveals the answers to the 928 shared Full questions.
 
 Questions refer to one or two images. For two-image questions, preserve the image order in the question record. Each prompt specifies its answer format; visual-grounding boxes use coordinates normalized to `[0, 1000]` by default.
 
@@ -151,7 +165,7 @@ The package includes predictions from 16 reference model runs:
 python reference_predictions/evaluate_all.py --output reproduced_scores
 ```
 
-For the Start-10 Full private test split, prepare a prediction for every question using its template and submit to [rslivebench.space](https://rslivebench.space/) when the Full submission route opens. Its official score is computed on the 34,563 questions outside Minival-928.
+For the Start-10 Full server-scored test split, prepare a prediction for every question using its template and submit to [rslivebench.space](https://rslivebench.space/) when the Full submission route opens. Its official score is computed on all 35,491 questions, including the Minival-928 overlap.
 
 ## 🔒 Privacy and responsible use
 
