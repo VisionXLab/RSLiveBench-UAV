@@ -24,6 +24,7 @@
 <p>
   <a href="https://rslivebench.space/"><img src="https://img.shields.io/badge/Project-Website-2563EB?style=flat-square" alt="Project website"></a>
   <a href="https://huggingface.co/datasets/erenzhou/RSLiveBench-UAV"><img src="https://img.shields.io/badge/Hugging%20Face-Dataset-FFD21E?style=flat-square&logo=huggingface&logoColor=black" alt="Hugging Face dataset"></a>
+  <a href="https://arxiv.org/abs/2611.14953"><img src="https://img.shields.io/badge/arXiv-2611.14953-B31B1B?style=flat-square" alt="arXiv paper"></a>
   <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-16A34A?style=flat-square" alt="CC BY 4.0 license"></a>
 </p>
 
@@ -170,4 +171,15 @@ The **Minival-928 dataset** is released under [Creative Commons Attribution 4.0 
 
 ## 📝 Citation
 
-If you use this benchmark, please cite *RSLiveBench-UAV: A Continually Evolving Vision-Language Benchmark for Aerial Spatial Intelligence*. An official citation entry has not yet been provided.
+If you use this benchmark, please cite the [RSLiveBench-UAV paper](https://arxiv.org/abs/2611.14953):
+
+```bibtex
+@misc{zhou2026rslivebench,
+  title={RSLiveBench-UAV: A Continually Evolving Vision-Language Benchmark for Aerial Spatial Intelligence},
+  author={Zhou, Yue and Liu, Jiawei and Chen, Jue and Gong, Ziyang and Wei, Haojia and Li, Jingxiang and Jiang, Xue and Zhong, Zhihang and Peng, Pai and Yang, Xue and Li, Yansheng and Li, Jonathan},
+  year={2026},
+  eprint={2611.14953},
+  archivePrefix={arXiv},
+  url={https://arxiv.org/abs/2611.14953}
+}
+```
